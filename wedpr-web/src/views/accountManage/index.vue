@@ -44,10 +44,10 @@
           </template>
         </el-table-column>
       </el-table>
-      <addUser :groupId="groupId" :showAddModal="showAddModal" @closeModal="closeModal" @handlOK="handlOK" />
-      <adminChange :groupId="groupId" :showChangeModal="showChangeModal" @closeModal="closeChangeModal" @handlOK="handlOK" />
-      <we-pagination :total="total" :page_offset="pageData.page_offset" :page_size="pageData.page_size" @paginationChange="paginationHandle"></we-pagination>
     </div>
+    <addUser :groupId="groupId" :showAddModal="showAddModal" @closeModal="closeModal" @handlOK="handlOK" />
+    <adminChange :groupId="groupId" :showChangeModal="showChangeModal" @closeModal="closeChangeModal" @handlOK="handlOK" />
+    <we-pagination :total="total" :page_offset="pageData.page_offset" :page_size="pageData.page_size" @paginationChange="paginationHandle"></we-pagination>
     <el-empty v-if="!total" :image-size="120" description="暂无数据">
       <img slot="image" src="~Assets/images/pic_empty_news.png" alt="" />
     </el-empty>
