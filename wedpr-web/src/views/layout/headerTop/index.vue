@@ -97,8 +97,8 @@ export default {
     display: flex;
     align-items: center;
     img {
-      width: 124px;
-      height: auto;
+      width: auto;
+      height: 22px;
       display: block;
       margin: 0 auto;
     }
