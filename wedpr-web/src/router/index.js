@@ -7,7 +7,7 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/login/index.vue'),
+    component: () => import(/* webpackChunkName: "login" */ '../views/login/index.vue'),
     meta: {
       title: '用户登录',
       requireAuth: false,
@@ -18,7 +18,7 @@ const routes = [
   {
     path: '/register',
     name: '/register',
-    component: () => import(/* webpackChunkName: "about" */ '../views/register/index.vue'),
+    component: () => import(/* webpackChunkName: "register" */ '../views/register/index.vue'),
     meta: {
       title: '用户注册',
       requireAuth: false,
@@ -28,7 +28,7 @@ const routes = [
   },
   {
     path: '/noPermission',
-    component: () => import(/* webpackChunkName: "about" */ '../views/noPermission/index.vue'),
+    component: () => import(/* webpackChunkName: "noPermission" */ '../views/noPermission/index.vue'),
     meta: {
       title: '暂无权限',
       requireAuth: false,
@@ -50,12 +50,12 @@ const routes = [
     path: '/layout',
     name: 'layout',
     redirect: '/tenantManage',
-    component: () => import(/* webpackChunkName: "about" */ '../views/layout/index.vue'),
+    component: () => import(/* webpackChunkName: "layout" */ '../views/layout/index.vue'),
     children: [
       {
         name: 'home',
         path: '/home',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/home/index.vue'),
+        component: () => import(/* webpackChunkName: "home" */ '@/views/home/index.vue'),
         meta: {
           title: '平台首页',
           isParent: true,
@@ -67,7 +67,7 @@ const routes = [
       {
         name: 'tenantManage',
         path: '/tenantManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/tenantManage/index.vue'),
+        component: () => import(/* webpackChunkName: "tenantManage" */ '@/views/tenantManage/index.vue'),
         meta: {
           title: '用户管理',
           isParent: true,
@@ -79,7 +79,7 @@ const routes = [
       {
         name: 'accountManage',
         path: '/accountManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/accountManage/index.vue'),
+        component: () => import(/* webpackChunkName: "accountManage" */ '@/views/accountManage/index.vue'),
         meta: {
           title: '管理用户组',
           isParent: false,
@@ -91,7 +91,7 @@ const routes = [
       {
         name: 'dataManage',
         path: '/dataManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/dataManage/index.vue'),
+        component: () => import(/* webpackChunkName: "dataManage" */ '@/views/dataManage/index.vue'),
         meta: {
           title: '数据资源',
           isParent: true,
@@ -103,7 +103,7 @@ const routes = [
       {
         name: 'dataCreate',
         path: '/dataCreate',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/dataCreate/index.vue'),
+        component: () => import(/* webpackChunkName: "dataCreate" */ '@/views/dataCreate/index.vue'),
         meta: {
           title: '新增数据资源',
           isParent: false,
@@ -115,7 +115,7 @@ const routes = [
       {
         name: 'dataApply',
         path: '/dataApply',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/dataApply/index.vue'),
+        component: () => import(/* webpackChunkName: "dataApply" */ '@/views/dataApply/index.vue'),
         meta: {
           title: '申请使用',
           isParent: false,
@@ -127,7 +127,7 @@ const routes = [
       {
         name: 'dataApplyModify',
         path: '/dataApplyModify',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/dataApplyModify/index.vue'),
+        component: () => import(/* webpackChunkName: "dataApplyModify" */ '@/views/dataApplyModify/index.vue'),
         meta: {
           title: '申请使用',
           isParent: false,
@@ -139,7 +139,7 @@ const routes = [
       {
         name: 'dataDetail',
         path: '/dataDetail',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/dataDetail/index.vue'),
+        component: () => import(/* webpackChunkName: "dataDetail" */ '@/views/dataDetail/index.vue'),
         meta: {
           title: '数据详情',
           isParent: false,
@@ -151,7 +151,7 @@ const routes = [
       {
         name: 'modifyData',
         path: '/modifyData',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/modifyData/index.vue'),
+        component: () => import(/* webpackChunkName: "modifyData" */ '@/views/modifyData/index.vue'),
         meta: {
           title: 'modifyData',
           isParent: false,
@@ -163,7 +163,7 @@ const routes = [
       {
         name: 'projectManage',
         path: '/projectManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/projectManage/index.vue'),
+        component: () => import(/* webpackChunkName: "projectManage" */ '@/views/projectManage/index.vue'),
         meta: {
           title: '项目空间',
           isParent: true,
@@ -175,7 +175,7 @@ const routes = [
       {
         name: 'projectCreate',
         path: '/projectCreate',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/projectCreate/index.vue'),
+        component: () => import(/* webpackChunkName: "projectCreate" */ '@/views/projectCreate/index.vue'),
         meta: {
           title: '新增项目',
           isParent: false,
@@ -187,7 +187,7 @@ const routes = [
       {
         name: 'projectEdit',
         path: '/projectEdit',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/projectEdit/index.vue'),
+        component: () => import(/* webpackChunkName: "projectEdit" */ '@/views/projectEdit/index.vue'),
         meta: {
           title: '编辑项目',
           isParent: false,
@@ -199,7 +199,7 @@ const routes = [
       {
         name: 'projectDetail',
         path: '/projectDetail',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/projectDetail/index.vue'),
+        component: () => import(/* webpackChunkName: "projectDetail" */ '@/views/projectDetail/index.vue'),
         meta: {
           title: '项目详情',
           isParent: false,
@@ -211,7 +211,7 @@ const routes = [
       {
         name: 'jobDetail',
         path: '/jobDetail',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/jobDetail/index.vue'),
+        component: () => import(/* webpackChunkName: "jobDetail" */ '@/views/jobDetail/index.vue'),
         meta: {
           title: '任务详情',
           isParent: false,
@@ -223,7 +223,7 @@ const routes = [
       {
         name: 'leadMode',
         path: '/leadMode',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/leadMode/index.vue'),
+        component: () => import(/* webpackChunkName: "leadMode" */ '@/views/leadMode/index.vue'),
         meta: {
           title: '新增项目',
           isParent: false,
@@ -235,7 +235,7 @@ const routes = [
       {
         name: 'resetParams',
         path: '/resetParams',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/resetParams/index.vue'),
+        component: () => import(/* webpackChunkName: "resetParams" */ '@/views/resetParams/index.vue'),
         meta: {
           title: '调参重跑',
           isParent: false,
@@ -247,7 +247,7 @@ const routes = [
       {
         name: 'messageManage',
         path: '/messageManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/messageManage/index.vue'),
+        component: () => import(/* webpackChunkName: "messageManage" */ '@/views/messageManage/index.vue'),
         meta: {
           title: '消息通知',
           isParent: true,
@@ -259,7 +259,7 @@ const routes = [
       {
         name: 'logManage',
         path: '/logManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/logManage/index.vue'),
+        component: () => import(/* webpackChunkName: "logManage" */ '@/views/logManage/index.vue'),
         meta: {
           title: '日志审计',
           isParent: true,
@@ -271,7 +271,7 @@ const routes = [
       {
         name: 'approveManage',
         path: '/approveManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/approveManage/index.vue'),
+        component: () => import(/* webpackChunkName: "approveManage" */ '@/views/approveManage/index.vue'),
         meta: {
           title: '审批中心',
           isParent: true,
@@ -283,7 +283,7 @@ const routes = [
       {
         name: 'approveDetail',
         path: '/approveDetail',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/approveDetail/index.vue'),
+        component: () => import(/* webpackChunkName: "approveDetail" */ '@/views/approveDetail/index.vue'),
         meta: {
           title: '审批详情',
           isParent: false,
@@ -295,7 +295,7 @@ const routes = [
       {
         name: 'serverManage',
         path: '/serverManage',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/serverManage/index.vue'),
+        component: () => import(/* webpackChunkName: "serverManage" */ '@/views/serverManage/index.vue'),
         meta: {
           title: '服务发布',
           isParent: true,
@@ -307,7 +307,7 @@ const routes = [
       {
         name: 'serverCreate',
         path: '/serverCreate',
-        component: () => import(/* webpackChunkName: "layout" */ '@/views/serverCreate/index.vue'),
+        component: () => import(/* webpackChunkName: "serverCreate" */ '@/views/serverCreate/index.vue'),
         meta: {
           title: '服务发布',
           isParent: false,
