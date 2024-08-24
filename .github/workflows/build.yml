@@ -1,4 +1,4 @@
-name: Java-SDK GitHub Actions
+name: WeDPR GitHub Actions
 on:
   push:
   pull_request:
