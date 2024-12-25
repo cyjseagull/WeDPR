@@ -46,6 +46,11 @@ public class WeDPRApplication extends SpringBootServletInitializer {
     protected static ConfigurableApplicationContext applicationContext;
 
     public static void main(String[] args, String serviceName) throws Exception {
+        init(args, serviceName, "wedpr");
+    }
+
+    public static void init(String[] args, String serviceName, String activeProfile)
+            throws Exception {
         final SpringApplication application = new SpringApplication(WeDPRApplication.class);
         application.addListeners(
                 new ApplicationListener<ApplicationPreparedEvent>() {
@@ -64,7 +69,7 @@ public class WeDPRApplication extends SpringBootServletInitializer {
                         logger.info("init WeDPRApplication application success");
                     }
                 });
-        String[] springArgs = generateSpringArgs();
+        String[] springArgs = generateSpringArgs(activeProfile);
         applicationContext = application.run(ArrayUtils.addAll(args, springArgs));
     }
 
@@ -123,10 +128,10 @@ public class WeDPRApplication extends SpringBootServletInitializer {
         return serviceInfo;
     }
 
-    private static String[] generateSpringArgs() {
+    private static String[] generateSpringArgs(String activeProfile) {
         // WeDPRConfig.getConfig().keySet()
         List<String> springArgs = new ArrayList<>();
-        springArgs.add("--spring.profiles.active=wedpr");
+        springArgs.add("--spring.profiles.active=" + activeProfile);
         for (String key : WeDPRConfig.getConfig().stringPropertyNames()) {
             if (key.startsWith(SPRING_CONFIGURATION)) {
                 String springOption =
